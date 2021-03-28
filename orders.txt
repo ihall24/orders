@@ -1,0 +1,35 @@
+1) fopen function is used for opening file in different modes eg: r,r+,w,w+ etc and returns file pointer on success
+
+$fp = fopen("$document_root/../orders/orders.txt", 'w'); //opens file in write mode using fopen() function
+
+2) feof is used to read the data from the file until end of file is reached
+
+Syntax
+
+feof(filepointer);
+
+while(!feof($fp))
+
+3) fclose function closes an already opened file
+
+Syntax
+
+fclose(filepointer);
+
+fclose($fp);
+
+4) fwrite function writes data to file and it stops writing till end of file is reached or specified length is reached
+
+Syntax
+
+fwrite(filepointer,string,length);
+
+fwrite($fp,$outputstring,strlen($outputstring));
+
+5) filesize() function returns the size of file in bytes
+
+Syntax
+
+filesize(filename);
+
+echo filesize("$document_root/../orders/orders.txt");
